@@ -1,3 +1,14 @@
+*, *::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  color: #fff;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +21,33 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+button{
+  all: unset;
+  font-size: 1.2rem;
+}
+
+a{
+  color: #3a3939;
+  text-decoration: none;
+}
+
+ul,li,ol{
+  list-style: none;
+}
+
+h1,h2{
+  font-size: 3.8rem;
+}
+
+h3,h4{
+  font-size: 2.8rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

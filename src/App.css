@@ -1,38 +1,195 @@
-.App {
+:root{
+  --primary-color: #1E2A5E;
+  --secondary-color: #7C93C3;
+  --text-white: #fff;
+  --text-grey: #ccc;
+}
+
+.home{
+  display: flex;
+}
+
+.sidebar{
+  min-width: 20vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero{
+  width: 100%;
+  height: 100vh;
+}
+.navlink{
+  color: #fff;
+}
+.active{
+  color: #1E2A5E;
+  background-color:#7C93C3 ;
+}
+/* Sidebar Section css start... */
+.title, .user{
+  padding: 1.5rem 0rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.title{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user{
+  display: flex;
+}
+.user-picture{
+  height: 6rem;
+  width: 6rem;
+  background-color: #7C93C3;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-name, .user-role{
+  font-size: 2rem;
+  margin-left: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-role{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: var(--text-grey);
+}
+
+.links{
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+}
+.link{
+  font-size: 1.6rem;
+  min-width: 20vw;
+  padding: 1rem;
+
+}
+.link-item{
+  margin-left: 1rem;
+}
+ .link:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+ }
+
+
+/* Sidebar Section css ends... */
+
+/* Main section css start  */
+.main{
+  display: flex;
+  height: 100vh;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.main h1{
+  color: var(--primary-color);
+}
+/* Main section css end  */
+
+
+/* Admin section css start  */
+.admin{
+  height: 100%;
+  width: 100%;
+}
+.admin-title{
+  margin-left: 2rem;
+  padding: 1.5rem 1rem;
+  color: var(--primary-color);
+}
+.form-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.admin-form{
+  height: 80%;
+  width: 85%;
+}
+.admin-form label{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.admin-form label input{
+  background-color: transparent;
+  width: 30rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+  outline: none;
+}
+.input-email{
+  margin-right: 3.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.input-phone{
+  margin-right: 2.8rem;
+}
+.input-pwd{
+  margin-right: 0.8rem;
+}
+.input-cpwd{
+  margin-right: 1.6rem;
+}
+::placeholder{
+  color: #b8b8b8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-btn{
+  padding: 1rem 4rem;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+  cursor: pointer;
 }
+
+.validation-msg{
+  font-size: 1.2rem;
+  color: red;
+  padding: 1rem 0rem 1rem 9rem;
+}
+/* Admin section css end  */
+
+/* UserDetails section css start  */
+.user-details{
+  height: 100%;
+  width: 100%;
+}
+
+.user-details h3{
+  padding: 1rem;
+  color: #1E2A5E;
+  margin-top: 3rem;
+}
+
+.details-container{
+  justify-content: center;
+  height: 80%;
+}
+
+.details{
+  color: #1E2A5E;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  justify-content: space-around;
+  height: 20%;
+  width: 40%;
+  font-weight: 500;
+}
+
+/* UserDetails section css end  */
+
