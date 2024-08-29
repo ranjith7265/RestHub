@@ -9,26 +9,41 @@ import { NavLink } from "react-router-dom";
 function NavLinks() {
   return (
     <ul className="links">
-      <NavLink to="/" className="navlink" >
+      <NavLink to="/" className="navlink">
         <li className="link">
-          <FaHome /> <span className="link-item">Home</span>
+          <span className="link-icon">
+            <FaHome />
+          </span>
+          <span className="link-item">Home</span>
         </li>
       </NavLink>
       <NavLink to="/admin" className="navlink">
         <li className="link">
-          <MdAdminPanelSettings /> <span className="link-item">Admin</span>
+          <span className="link-icon">
+            <MdAdminPanelSettings />{" "}
+          </span>
+          <span className="link-item">Admin</span>
         </li>
       </NavLink>
       <NavLink to="/userdetails" className="navlink">
         <li className="link">
-          <CiMoneyCheck1 /> <span className="link-item">User Details</span>
+          <span className="link-icon">
+            <CiMoneyCheck1 />
+          </span>
+          <span className="link-item">User Details</span>
         </li>
       </NavLink>
       <li className="link">
-        <TbReportSearch /> <span className="link-item">Reports</span>
+        <span className="link-icon">
+          <TbReportSearch />{" "}
+        </span>
+        <span className="link-item">Reports</span>
       </li>
       <li className="link">
-        <CgInsights /> <span className="link-item">Insights</span>
+        <span className="link-icon">
+          <CgInsights />
+        </span>
+        <span className="link-item">Insights</span>
       </li>
     </ul>
   );

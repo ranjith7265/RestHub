@@ -9,8 +9,6 @@ function Admin() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [pwd, setpwd] = useState("");
-  const [cpwd, setcpwd] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,14 +23,12 @@ function Admin() {
     setLastName("")
     setEmail("")
     setPhone("")
-    setpwd("")
-    setcpwd("")
   } 
 
   const handleFirstNamechange = (e) => {
     const firstName = e.target.value;
     firstName.length < 5
-      ? setMessage("must be at least 5 characters")
+      ? setMessage("Must be at least 5 characters!!")
       : setMessage("");
     
     setFirstName(e.target.value);
@@ -41,7 +37,7 @@ function Admin() {
   const handleLastNamechange = (e) => {
     const lastName = e.target.value;
     lastName.length < 1
-      ? setMessage("Atleast 1 character must")
+      ? setMessage("Atleast 1 character must!!")
       : setMessage("");
     
     setLastName(e.target.value);
@@ -53,7 +49,7 @@ function Admin() {
     (email.toLowerCase()
     .match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    ) ? setMessage("") : setMessage("Invalid email address"));
+    ) ? setMessage("") : setMessage("Invalid email address!!"));
 
     setEmail(e.target.value);
 };
@@ -61,7 +57,7 @@ function Admin() {
   const handlePhonechange = (e) => {
     const phone = e.target.value;
 
-    (phone.length < 10 ? setMessage("10 numbers must") : setMessage(""));
+    (phone.length < 10 ? setMessage("10 numbers must!!") : setMessage(""));
     setPhone(e.target.value)
   };
   return (
