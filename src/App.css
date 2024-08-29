@@ -5,47 +5,56 @@
   --text-grey: #ccc;
 }
 
+
 .home{
   display: flex;
-}
-
-.sidebar{
-  min-width: 20vw;
-  height: 100vh;
-  background-color: var(--primary-color);
-  display: flex;
-  flex-direction: column;
 }
 
 .hero{
   width: 100%;
   height: 100vh;
 }
-.navlink{
-  color: #fff;
-}
+
 .active{
   color: #1E2A5E;
   background-color:#7C93C3 ;
 }
-/* Sidebar Section css start... */
+/* ======== SideBar =========... */
+.sidebar{
+  width: 20vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.navlink{
+  width: 100%;
+  color: #fff;
+}
 .title, .user{
-  padding: 1.5rem 0rem;
   border-bottom: 1px solid var(--secondary-color);
 }
 .title{
-  text-align: center;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .user{
+  height: 8rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .user-picture{
-  height: 6rem;
-  width: 6rem;
-  background-color: #7C93C3;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: 2rem;
 }
 
 .user-name, .user-role{
@@ -58,32 +67,57 @@
   margin-top: 0.5rem;
   color: var(--text-grey);
 }
-
-.links{
-  min-height: 45vh;
+.user-name-role{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.links{
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 .link{
+  width: 100%;
   font-size: 1.6rem;
-  min-width: 20vw;
-  padding: 1rem;
-
+  padding: 1.2rem;
+  display: flex;
+}
+.link-icon{
+  margin-left: 1rem;
 }
 .link-item{
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
  .link:hover{
   background-color: var(--secondary-color);
   color: var(--primary-color);
  }
 
+ .toggle{
+  height: 40px;
+  width: 40px;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0rem;
+  right: -40px;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+ }
 
-/* Sidebar Section css ends... */
+.toggle-icon{
+  font-size: 1.5rem;
+  color: var(--text-white);
+}
 
-/* Main section css start  */
+.sidebar.close{
+  width: 0vw;
+}
+/* ======== Main Section =========... */
+
 .main{
   display: flex;
   height: 100vh;
@@ -93,16 +127,15 @@
 .main h1{
   color: var(--primary-color);
 }
-/* Main section css end  */
 
+/* ======== Admin Component =========... */
 
-/* Admin section css start  */
 .admin{
   height: 100%;
   width: 100%;
 }
 .admin-title{
-  margin-left: 2rem;
+  margin-left: 7.5rem;
   padding: 1.5rem 1rem;
   color: var(--primary-color);
 }
@@ -160,9 +193,11 @@
   color: red;
   padding: 1rem 0rem 1rem 9rem;
 }
-/* Admin section css end  */
 
-/* UserDetails section css start  */
+
+/* ======== User Details =========... */
+
+
 .user-details{
   height: 100%;
   width: 100%;
@@ -191,5 +226,4 @@
   font-weight: 500;
 }
 
-/* UserDetails section css end  */
 
