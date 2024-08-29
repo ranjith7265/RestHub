@@ -28,6 +28,7 @@
   flex-direction: column;
   position: relative;
   transition: all 0.3s ease-in-out;
+  color: var(--text-white);
 }
 .navlink{
   width: 100%;
@@ -110,7 +111,6 @@
 
 .toggle-icon{
   font-size: 1.5rem;
-  color: var(--text-white);
 }
 
 .sidebar.close{
@@ -185,7 +185,7 @@
   margin-top: 2rem;
   border-radius: 2rem;
   background-color: var(--primary-color);
-  cursor: pointer;
+  color: var(--text-white);
 }
 
 .validation-msg{
@@ -201,29 +201,58 @@
 .user-details{
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-details h3{
   padding: 1rem;
-  color: #1E2A5E;
-  margin-top: 3rem;
+  color: var(--primary-color);
 }
 
 .details-container{
-  justify-content: center;
+  width: 80%;
   height: 80%;
 }
-
-.details{
-  color: #1E2A5E;
-  font-size: 1.4rem;
+.details-title, .details-show{
   display: flex;
-  flex-direction: column;
-  margin-left: 2rem;
-  justify-content: space-around;
-  height: 20%;
-  width: 40%;
-  font-weight: 500;
+  justify-content: space-evenly;
+  margin-bottom: 0.2rem;
+  
 }
-
+.details-title span{
+  margin-left: 0.2rem;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 1rem;
+  color: var(--text-white);
+}
+.details-show span{
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 1rem;
+  margin-left: 0.2rem;
+  color: var(--text-white);
+  background-color:#9eb4e4;
+}
+.back-btn{
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.back-icon{
+  font-size: 2rem;
+  color: var(--text-white);
+}
 

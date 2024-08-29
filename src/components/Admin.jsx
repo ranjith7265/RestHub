@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import UserContext from "../Context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 
 function Admin() {
@@ -9,6 +10,7 @@ function Admin() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,9 +22,10 @@ function Admin() {
     }
     getData(user);
     setFirstName("");
-    setLastName("")
-    setEmail("")
-    setPhone("")
+    setLastName("");
+    setEmail("");
+    setPhone("");
+    navigate("/userdetails");
   } 
 
   const handleFirstNamechange = (e) => {
@@ -123,9 +126,7 @@ function Admin() {
               <input type="password" required></input>
             </label>
           </div>
-          <p className="validation-msg">
-            {message}
-          </p>
+          <p className="validation-msg">{message}</p>
           <button className="input-btn">Submit</button>
         </form>
       </div>
