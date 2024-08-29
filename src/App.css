@@ -191,7 +191,7 @@
 .validation-msg{
   font-size: 1.2rem;
   color: red;
-  padding: 1rem 0rem 1rem 9rem;
+  padding-left: 9rem;
 }
 
 

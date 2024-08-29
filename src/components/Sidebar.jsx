@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavLinks from "./NavLinks";
-import profile from '../user-profile.jpg'
+import profile from "../user-profile.jpg";
 import { FaAngleDoubleRight, FaAngleDoubleLeft } from "react-icons/fa";
 
 function Sidebar() {
@@ -10,13 +10,12 @@ function Sidebar() {
   const handleToggle = () => {
     if (!toggle) {
       setToggleClass("close");
-      settoggle(true)
+      settoggle(true);
+    } else {
+      setToggleClass("");
+      settoggle(false);
     }
-    else {
-      setToggleClass("")
-      settoggle(false)
-    }
-  }
+  };
   return (
     <section className={`sidebar ${toggleClass}`}>
       <h1 className="title">
