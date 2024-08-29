@@ -10,6 +10,8 @@ function Admin() {
     lastNameMsg: "",
     emailMsg: "",
     phoneMsg: "",
+    passwordMsg: "",
+    confirmMsg: "",
   });
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -28,10 +30,10 @@ function Admin() {
 
     if (firstName === "" && lastName === "" && email === "" && phone === "") {
       setValidationMsg({
-        firstNameMsg: "empty!!",
-        lastNameMsg: "empty!!",
-        emailMsg: "empty!!",
-        phoneMsg: "empty!!",
+        firstNameMsg: " First name empty!!",
+        lastNameMsg: "Last name empty!!",
+        emailMsg: " Email empty!!",
+        phoneMsg: "Phone empty!!",
       });
     }
 
@@ -96,9 +98,70 @@ function Admin() {
     const phone = e.target.value;
 
     phone.length < 10
-      ? setValidationMsg({ phoneMsg: "10 numbers must!!" })
+      ? setValidationMsg({ phoneMsg: "Atleast 10 numbers must!!" })
       : setValidationMsg({ phoneMsg: "" });
+
     setPhone(e.target.value);
+  };
+  const handlePasswordchange = (e) => {
+    const password = e.target.value;
+    // let passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+    if (password.length < 8) {
+      setValidationMsg({
+        passwordMsg: "Your password must be at least 8 characters",
+      });
+    } else if (password.search(/[a-z]/i) < 0) {
+      setValidationMsg({
+        passwordMsg: "Your password must contain at least one letter",
+      });
+    } else if (password.search(/[0-9]/) < 0) {
+      setValidationMsg({
+        passwordMsg: "Your password must contain at least one digit.",
+      });
+    } else if (password.search(/[!@#$%^&*]/) < 0) {
+      setValidationMsg({
+        passwordMsg: "Your password must contain at least one special latter.",
+      });
+    } else {
+      setValidationMsg({
+        passwordMsg: "",
+      });
+    }
+    // password.match(passwordRegex)
+    //   ? setValidationMsg({ passwordMsg: "" })
+    //   : setValidationMsg({ passwordMsg: "invalid password" });
+  };
+  const handleConfirmchange = (e) => {
+    const confirm = e.target.value;
+    // let passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+    if (confirm.length < 8) {
+      setValidationMsg({
+        confirmMsg: "Your confirm password must be at least 8 characters",
+      });
+    } else if (confirm.search(/[a-z]/i) < 0) {
+      setValidationMsg({
+        confirmMsg: "Your confirm password must contain at least one letter",
+      });
+    } else if (confirm.search(/[0-9]/) < 0) {
+      setValidationMsg({
+        confirmMsg: "Your confirm password must contain at least one digit.",
+      });
+    } else if (confirm.search(/[!@#$%^&*]/) < 0) {
+      setValidationMsg({
+        confirmMsg:
+          "Your confirm password must contain at least one special latter.",
+      });
+    } else {
+      setValidationMsg({
+        confirm: "",
+      });
+    }
+
+    // (confirm.match(passwordRegex)
+    //   ? setValidationMsg({ confirmMsg: "" })
+    //   : setValidationMsg({ confirmMsg: "invalid password" }));
   };
   return (
     <section className="admin">
@@ -155,14 +218,16 @@ function Admin() {
           <div>
             <label>
               <span className="input-pwd">Password:</span>
-              <input type="password"></input>
+              <input type="password" onChange={handlePasswordchange}></input>
             </label>
+            <p className="validation-msg">{validationMsg.passwordMsg}</p>
           </div>
           <div>
             <label>
               <span className="input-cpwd"> Confirm:</span>
-              <input type="password"></input>
+              <input type="password" onChange={handleConfirmchange}></input>
             </label>
+            <p className="validation-msg">{validationMsg.confirmMsg}</p>
           </div>
           <button className="input-btn">Submit</button>
         </form>
