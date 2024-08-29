@@ -17,7 +17,7 @@ function UserDetails() {
           <span>Phone</span>
         </div>
         {userData.map((user) => (
-          <div className="details-show">
+          <div className="details-show" key={user.phone}>
             <span>{`${user.firstName} ${user.lastName}`}</span>
             <span>{user.email}</span>
             <span>{user.phone}</span>
