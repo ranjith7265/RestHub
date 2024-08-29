@@ -5,6 +5,8 @@ import Main from './components/Main';
 import Sidebar from './components/Sidebar';
 import Admin from './components/Admin';
 import UserDetails from "./components/UserDetails"
+import toast, { Toaster } from "react-hot-toast";
+
 
 
 
@@ -14,7 +16,7 @@ function App() {
     <UserProvider>
       <BrowserRouter>
         <section className="home">
-          <Sidebar /> 
+          <Sidebar />
           <div className="hero">
             <Routes>
               <Route path="/" element={<Main />} />
@@ -22,6 +24,7 @@ function App() {
               <Route path="/userdetails" element={<UserDetails />} />
             </Routes>
           </div>
+          <Toaster />
         </section>
       </BrowserRouter>
     </UserProvider>
