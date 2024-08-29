@@ -21,7 +21,7 @@
 }
 /* ======== SideBar =========... */
 .sidebar{
-  width: 20vw;
+  width: 25vw;
   height: 100vh;
   background-color: var(--primary-color);
   display: flex;
@@ -83,6 +83,7 @@
   font-size: 1.6rem;
   padding: 1.2rem;
   display: flex;
+  overflow: hidden;
 }
 .link-icon{
   margin-left: 1rem;
