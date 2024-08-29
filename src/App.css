@@ -239,6 +239,10 @@
   color: var(--text-white);
   background-color:#9eb4e4;
 }
+.no-data{
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+}
 .back-btn{
   height: 5rem;
   width: 5rem;

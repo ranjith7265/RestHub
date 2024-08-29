@@ -16,6 +16,9 @@ function UserDetails() {
           <span>Email</span>
           <span>Phone</span>
         </div>
+        {userData.length <= 0 && (
+          <div className="details-show no-data">No Data Yet</div>
+        )}
         {userData.map((user) => (
           <div className="details-show" key={user.phone}>
             <span>{`${user.firstName} ${user.lastName}`}</span>
